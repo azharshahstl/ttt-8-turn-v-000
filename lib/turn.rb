@@ -38,7 +38,6 @@ def turn(board)
     user_input = gets.strip
     index = input_to_index(user_input)
      if (index.between?(0, 8) && position_taken?(board, index)) == true
-       display_board(board)
       return move(board, index, symbol = "X") && display_board(board)
      else
       return turn(board)
